@@ -1,0 +1,179 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@plugin "flowbite/plugin";
+
+
+@plugin "daisyui/theme" {
+    name: "light";
+    default: false;
+    prefersdark: false;
+    color-scheme: "light";
+    --color-base-100: oklch(100% 0 0);
+    --color-base-200: oklch(95% 0 0);
+    --color-base-300: oklch(90% 0 0);
+    --color-base-content: oklch(20% 0 0);
+    --color-primary: oklch(85% 0.18 85);
+    --color-primary-content: oklch(20% 0 0);
+    --color-secondary: oklch(70% 0.15 250);
+    --color-secondary-content: oklch(100% 0 0);
+    --color-accent: oklch(60% 0.2 30);
+    --color-accent-content: oklch(100% 0 0);
+    --color-neutral: oklch(50% 0 0);
+    --color-neutral-content: oklch(100% 0 0);
+    /* White */
+    --color-info: oklch(70% 0.15 200);
+    /* Info Blue */
+    --color-success: oklch(70% 0.15 150);
+    /* Success Green */
+    --color-warning: oklch(85% 0.18 85);
+    /* Warning Yellow */
+    --color-error: oklch(60% 0.2 30);
+    /* Error Red */
+    --radius-selector: 0.5rem;
+    --radius-field: 0.25rem;
+    --radius-box: 0.5rem;
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    --border: 1px;
+    --depth: 1;
+    --noise: 0;
+}
+
+
+@plugin "daisyui/theme" {
+    name: "dark";
+    default: true;
+    prefersdark: true;
+    color-scheme: "dark";
+    --color-base-100: oklch(20% 0 0);
+    /* Dark Gray */
+    --color-base-200: oklch(25% 0 0);
+    /* Medium Dark Gray */
+    --color-base-300: oklch(30% 0 0);
+    /* Medium Gray */
+    --color-base-content: oklch(90% 0 0);
+    /* Light Gray */
+    --color-primary: oklch(85% 0.18 85);
+    /* Edpuzzle Yellow */
+    --color-primary-content: oklch(20% 0 0);
+    /* Dark Gray */
+    --color-secondary: oklch(70% 0.15 250);
+    /* Accent Blue */
+    --color-secondary-content: oklch(100% 0 0);
+    /* White */
+    --color-accent: oklch(60% 0.2 30);
+    /* Accent Orange */
+    --color-accent-content: oklch(100% 0 0);
+    /* White */
+    --color-neutral: oklch(50% 0 0);
+    /* Neutral Gray */
+    --color-neutral-content: oklch(100% 0 0);
+    /* White */
+    --color-info: oklch(70% 0.15 200);
+    /* Info Blue */
+    --color-success: oklch(70% 0.15 150);
+    /* Success Green */
+    --color-warning: oklch(85% 0.18 85);
+    /* Warning Yellow */
+    --color-error: oklch(60% 0.2 30);
+    /* Error Red */
+    --radius-selector: 0.5rem;
+    --radius-field: 0.25rem;
+    --radius-box: 0.5rem;
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    --border: 1px;
+    --depth: 1;
+    --noise: 0;
+}
+
+
+body {
+    overflow: auto;
+}
+
+* {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: auto;
+}
+
+.glow-sm {
+    text-shadow:
+        0 0 1px currentColor,
+        0 0 20px currentColor,
+        0 0 20px currentColor;
+}
+
+.glow-md {
+    text-shadow:
+        0 0 2px currentColor,
+        0 0 25px currentColor,
+        0 0 25px currentColor;
+}
+
+.glow-lg {
+    text-shadow:
+        0 0 3px currentColor,
+        0 0 30px currentColor,
+        0 0 30px currentColor;
+}
+
+.glow-xl {
+    text-shadow:
+        0 0 4px currentColor,
+        0 0 35px currentColor,
+        0 0 35px currentColor;
+}
+
+.glow-1xl {
+    text-shadow:
+        0 0 5px currentColor,
+        0 0 40px currentColor,
+        0 0 40px currentColor;
+}
+
+.glow-animated {
+    animation: glow-animation 3s infinite alternate;
+}
+
+@keyframes glow-animation {
+    0% {
+        text-shadow: 0 0 5px currentColor, 0 0 5px currentColor, 0 0 15px currentColor, 0 0 20px currentColor;
+    }
+
+    50% {
+        text-shadow: 0 0 10px currentColor, 0 0 10px currentColor, 0 0 30px currentColor, 0 0 40px currentColor;
+    }
+
+    100% {
+        text-shadow: 0 0 5px currentColor, 0 0 5px currentColor, 0 0 15px currentColor, 0 0 20px currentColor;
+    }
+}
+
+#spotify-section {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#spotify-section.fade-out {
+    opacity: 0;
+}
+
+#spotify-section.fade-in {
+    opacity: 1;
+}
+
+#spotify-background {
+    transition: background-image 0.5s ease-in-out;
+}
